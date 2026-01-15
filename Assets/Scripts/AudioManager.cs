@@ -11,6 +11,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip damageClip;
     [SerializeField][Range(0f, 1f)] float damageVolume = 0.5f;
 
+    [Header("Destroy SFX")]
+    [SerializeField] AudioClip destroyClip;
+    [SerializeField][Range(0f, 1f)] float destroyVolume = 0.5f;
+
     public void PlayShootingSFX()
     {
         PlaySFX(shootingClip, shootingVolume);
@@ -19,6 +23,11 @@ public class AudioManager : MonoBehaviour
     public void PlayDamageSFX()
     {
         PlaySFX(damageClip, damageVolume);
+    }
+
+    public void PlayDestroySFX()
+    {
+        PlaySFX(destroyClip, destroyVolume);
     }
 
 
