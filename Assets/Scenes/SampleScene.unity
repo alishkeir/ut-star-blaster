@@ -304,6 +304,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4692534110860723902, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692534110860723902, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692534110860723902, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692534110860723902, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692534110860723902, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4782984579648492818, guid: 9e5372f2a84fb344a92d0df78dbdc59c, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -361,6 +381,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2383248813196866007, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383248813196866007, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383248813196866007, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383248813196866007, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383248813196866007, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2605021355997455972, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
       propertyPath: m_Name
       value: Player
@@ -368,28 +408,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2605021355997455972, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6591518419208998645}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
---- !u!1 &6591518419208998644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2605021355997455972, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
-  m_PrefabInstance: {fileID: 6591518419208998643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6591518419208998645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591518419208998644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed18d80ba76396541b2d6da88eb2868a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
