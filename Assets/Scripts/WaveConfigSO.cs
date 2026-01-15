@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "WaveConfig", menuName = "New WaveConfig")]
 public class WaveConfigSO : ScriptableObject
