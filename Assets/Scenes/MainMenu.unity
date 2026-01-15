@@ -1396,7 +1396,7 @@ PrefabInstance:
     - target: {fileID: 3988824643996276933, guid: 5d9c2eacda563d84781ff5f26ab0ba29, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 4def62660c765454096b02c647ab8154, type: 3}
+      objectReference: {fileID: 8300000, guid: 259ab57bda076c74dbdbf24923fe0426, type: 3}
     - target: {fileID: 7168098407496022470, guid: 5d9c2eacda563d84781ff5f26ab0ba29, type: 3}
       propertyPath: m_Name
       value: Audio Manager
