@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     AudioManager audioManager;
     ScoreKeeper scoreKeeper;
 
+    LevelManager levelManager;
+
 
 
     void Start()
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioManager = FindFirstObjectByType<AudioManager>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
 
@@ -65,13 +68,22 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        if (!isPlayer)
+
+
+        if (isPlayer)
+        {
+            levelManager.LoadGameOver();
+        }
+        else
         {
             scoreKeeper.ModifyScore(scoreValue);
+
         }
 
         Destroy(gameObject);
+
     }
+
 
     void PlayHitParticles()
     {

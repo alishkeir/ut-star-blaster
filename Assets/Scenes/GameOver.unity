@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 1099436360}
   - component: {fileID: 1099436359}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,7 +929,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1099436360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735377386}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1099436360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,7 +1072,7 @@ GameObject:
   - component: {fileID: 1598252767}
   - component: {fileID: 1598252766}
   m_Layer: 5
-  m_Name: Start Button
+  m_Name: Play Again Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1598252767}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735377386}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1598252767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1230,74 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 12.000006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1735377385
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594022969683943167, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110403567115559399, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+      propertyPath: m_Name
+      value: Level Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+--- !u!114 &1735377386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7724064829606483025, guid: c10159ba55649b541a4380f3e445ec8a, type: 3}
+  m_PrefabInstance: {fileID: 1735377385}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e379cb910b0b04ab6f1be084ff10fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &1746008555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,7 +1593,7 @@ PrefabInstance:
     - target: {fileID: 3988824643996276933, guid: 5d9c2eacda563d84781ff5f26ab0ba29, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 4def62660c765454096b02c647ab8154, type: 3}
+      objectReference: {fileID: 8300000, guid: 155bc6c7083ad394784bc026ba6f933d, type: 3}
     - target: {fileID: 7168098407496022470, guid: 5d9c2eacda563d84781ff5f26ab0ba29, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -1525,3 +1617,4 @@ SceneRoots:
   - {fileID: 2029191234}
   - {fileID: 1336189779}
   - {fileID: 1956964292}
+  - {fileID: 1735377385}
