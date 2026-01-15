@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2383248813196866007}
   - component: {fileID: 6551543104212094985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6858046679961434727}
   - component: {fileID: 5892687383688645235}
   - component: {fileID: -3068216723568170133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,4 +219,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a4fbe0830325a45869aad03246b941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 50
+  health: 100
