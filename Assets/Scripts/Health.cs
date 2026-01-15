@@ -8,9 +8,12 @@ public class Health : MonoBehaviour
 
     CameraShake cameraShake;
 
+    AudioManager audioManager;
+
     void Start()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
 
@@ -41,6 +44,7 @@ public class Health : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        audioManager.PlayDamageSFX();
     }
 
     void PlayHitParticles()

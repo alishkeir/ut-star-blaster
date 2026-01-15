@@ -18,12 +18,17 @@ public class Shooter : MonoBehaviour
     [SerializeField] float fireRateVariance = 0f;
 
 
+
     [HideInInspector] public bool isFiring;
+    AudioManager audioManager;
+
 
     Coroutine fireCoroutine;
 
     void Start()
     {
+        audioManager = FindFirstObjectByType<AudioManager>();
+
         if (useAI)
         {
             isFiring = true;
@@ -65,6 +70,7 @@ public class Shooter : MonoBehaviour
             float waitTime = Random.Range(baseFireRate - fireRateVariance, baseFireRate + fireRateVariance);
             waitTime = Mathf.Clamp(waitTime, minimumFireRate, float.MaxValue);
 
+            audioManager.PlayShootingSFX();
 
             yield return new WaitForSeconds(waitTime);
         }
