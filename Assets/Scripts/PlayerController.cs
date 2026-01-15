@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        InitBounds();
         MovePlayer();
         FireShooter();
     }

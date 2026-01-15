@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 100
+  hitParticles: {fileID: 0}
+  applyCameraShake: 1
 --- !u!114 &7753472578767942166
 MonoBehaviour:
   m_ObjectHideFlags: 0
