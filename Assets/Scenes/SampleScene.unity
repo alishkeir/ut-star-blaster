@@ -471,6 +471,22 @@ PrefabInstance:
       propertyPath: timeBetweenWaves
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1783546143030722009, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
+      propertyPath: waveConfigs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783546143030722009, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
+      propertyPath: 'waveConfigs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b1ae4b8561d467f44837e8152346946c, type: 2}
+    - target: {fileID: 1783546143030722009, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
+      propertyPath: 'waveConfigs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ece1e4784580ef849b01f190624bb394, type: 2}
+    - target: {fileID: 1783546143030722009, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
+      propertyPath: 'waveConfigs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f9012d54d14fb744cb5fac5db8a6ffe6, type: 2}
     - target: {fileID: 2312840244209807385, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
