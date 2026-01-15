@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class AspectRationLock : MonoBehaviour
 {
-    [HideInInspector] public float targetAspect = 10f / 16f;
+    [HideInInspector] public float targetAspect = 9f / 16f;
 
     void Start()
     {

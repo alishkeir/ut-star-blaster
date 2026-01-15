@@ -17,7 +17,9 @@ public class LevelManager : MonoBehaviour
     public void LoadGame()
     {
         scoreKeeper.ResetScore();
+
         SceneManager.LoadScene("GameScene");
+        Cursor.visible = false;
     }
 
     public void LoadGameOver()
@@ -28,6 +30,7 @@ public class LevelManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Cursor.visible = true;
     }
 
 
@@ -40,6 +43,17 @@ public class LevelManager : MonoBehaviour
     IEnumerator WaitAndLoad(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        if (sceneName != "GameScene")
+        {
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
+
+
         SceneManager.LoadScene(sceneName);
     }
 
