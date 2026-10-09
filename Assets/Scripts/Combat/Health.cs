@@ -28,36 +28,50 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        // DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
 
-        if (damageDealer)
+        Debug.Log("OnTriggerEnter2D 1");
+
+
+        if (other.gameObject.TryGetComponent(out DamageDealer damageDealer))
         {
-            TakeDamage(damageDealer.GetDamage());
-            PlayHitParticles();
-            damageDealer.Hit();
+            Debug.Log("OnTriggerEnter2D 2");
 
-            if (health <= 0)
+            if (damageDealer)
             {
-                audioManager.PlayDestroySFX();
-            }
-            else
-            {
-                audioManager.PlayDamageSFX();
-            }
 
-            if (applyCameraShake)
-            {
-                cameraShake.Play();
+                Debug.Log("OnTriggerEnter2D 3");
+
+                TakeDamage(damageDealer.GetDamage());
+
+                damageDealer.Hit();
+
+
             }
         }
+
+
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool displayParticles = true)
     {
+
+        if (displayParticles)
+            PlayHitParticles();
+
+        if (applyCameraShake)
+            cameraShake.Play();
+
         health -= damage;
+
         if (health <= 0)
         {
+            AudioManager.Instance.PlayDestroySFX();
             Die();
+        }
+        else
+        {
+            AudioManager.Instance.PlayDamageSFX();
         }
     }
 

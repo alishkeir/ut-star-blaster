@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
 
 
 
-    static AudioManager instance = null;
+    public static AudioManager Instance = null;
 
 
     void Awake()
@@ -27,14 +27,14 @@ public class AudioManager : MonoBehaviour
 
     void ManageSingleton()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
 
