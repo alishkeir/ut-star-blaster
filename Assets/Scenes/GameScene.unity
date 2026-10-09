@@ -355,7 +355,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 838182224}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnMove
+        m_MethodName: OnMouseMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -367,6 +367,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 553568db-949b-413d-b91b-e9a4309ba618
     m_ActionName: 'Player/MouseMovement[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 838182224}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnQuitGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 106627b6-d907-4efd-a545-6a37954faf3c
+    m_ActionName: 'Player/Quit Game[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -923,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7938036501927891380, guid: f030bac62231681489ccfd569e5b7ea3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1059,6 +1075,10 @@ PrefabInstance:
     - target: {fileID: 4798913143798931976, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
       propertyPath: leftBoundPadding
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798913143798931976, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
+      propertyPath: mouseSensitivity
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4798913143798931976, guid: 4776074122cfc6a4eada94ffcae60776, type: 3}
       propertyPath: rightBoundPadding

@@ -23,6 +23,8 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         ManageSingleton();
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
     }
 
     void ManageSingleton()

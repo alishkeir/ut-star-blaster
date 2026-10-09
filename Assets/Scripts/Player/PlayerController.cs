@@ -5,15 +5,18 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float mouseSensitivity = 0.01f;
 
     [SerializeField] float leftBoundPadding = 1f;
     [SerializeField] float rightBoundPadding = 1f;
     [SerializeField] float topBoundPadding = 1f;
     [SerializeField] float bottomBoundPadding = 1f;
 
+
     Shooter playerShooter;
 
     Vector3 moveVector;
+    Vector2 mouseDelta;
     Vector2 minBounds;
     Vector2 maxBounds;
 
@@ -47,6 +50,11 @@ public class PlayerController : MonoBehaviour
         moveVector = context.ReadValue<Vector2>();
     }
 
+    public void OnMouseMove(InputAction.CallbackContext context)
+    {
+        mouseDelta = context.ReadValue<Vector2>();
+    }
+
     public void OnFire(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -59,15 +67,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnQuitGame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            Application.Quit();
+    }
+
 
     void HandleMovement()
     {
-        Vector3 newPos = transform.position + moveSpeed * Time.deltaTime * moveVector;
+        Vector3 newPos = transform.position;
+
+        newPos += moveSpeed * Time.deltaTime * (Vector3)moveVector;
+        newPos += mouseSensitivity * (Vector3)mouseDelta;
 
         newPos.x = Math.Clamp(newPos.x, minBounds.x + leftBoundPadding, maxBounds.x - rightBoundPadding);
         newPos.y = Math.Clamp(newPos.y, minBounds.y + bottomBoundPadding, maxBounds.y - topBoundPadding);
 
         transform.position = newPos;
+
+        mouseDelta = Vector2.zero;
     }
 
 
