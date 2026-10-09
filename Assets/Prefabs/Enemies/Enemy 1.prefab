@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   isPlayer: 0
-  scoreValue: 150
+  scoreValue: 75
   health: 75
   hitParticles: {fileID: 1526019159038631004, guid: b20116fd5835eff4588d14ecc768eba8, type: 3}
   applyCameraShake: 0
@@ -188,11 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
   projectilePrefab: {fileID: 197186035530886971, guid: 1d5afd7a5d32e9d4882562cc517ce96d, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 20
   projectileLifetime: 5
   baseFireRate: 1
   useAI: 1
-  minimumFireRate: 0.5
+  minimumFireRate: 0.65
   fireRateVariance: 0.4
   isFiring: 0
 --- !u!1 &6010385698923713672

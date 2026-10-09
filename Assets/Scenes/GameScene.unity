@@ -538,6 +538,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 696189082931844380, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
+      propertyPath: m_text
+      value: 01234567890
+      objectReference: {fileID: 0}
+    - target: {fileID: 696189082931844380, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
       propertyPath: m_fontSize
       value: 70
       objectReference: {fileID: 0}
@@ -545,6 +549,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 838182222}
+    - target: {fileID: 3711810179810000937, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -162.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711810179810000937, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 56.008
+      objectReference: {fileID: 0}
     - target: {fileID: 5718705364274489222, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
       propertyPath: m_Camera
       value: 
@@ -648,6 +660,14 @@ PrefabInstance:
     - target: {fileID: 7254818368729369719, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353930449142438622, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 112.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353930449142438622, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 81.01
       objectReference: {fileID: 0}
     - target: {fileID: 7901547223933202161, guid: 7f0530e488aa7544fb162e645f8270b5, type: 3}
       propertyPath: m_Name
@@ -782,7 +802,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7566508349173606907, guid: 0735bd9bd6ced1f48b2a584b196273e9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
