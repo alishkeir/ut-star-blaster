@@ -48,7 +48,9 @@ public class Obstacle : MonoBehaviour
             return;
         }
 
-        AudioManager.Instance.PlayDestroySFX();
+        if (!other.gameObject.CompareTag("Obstacle Boundary"))
+            AudioManager.Instance.PlayDestroySFX();
+
         Destroy(gameObject);
     }
 

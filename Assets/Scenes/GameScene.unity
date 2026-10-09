@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 1632786597}
   m_Layer: 11
   m_Name: Obstacle Boundary
-  m_TagString: Untagged
+  m_TagString: Obstacle Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
