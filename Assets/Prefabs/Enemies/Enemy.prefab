@@ -138,8 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a4fbe0830325a45869aad03246b941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  isPlayer: 0
+  scoreValue: 50
   health: 25
   hitParticles: {fileID: 1526019159038631004, guid: b20116fd5835eff4588d14ecc768eba8, type: 3}
+  applyCameraShake: 0
 --- !u!1 &4806601254188159519
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,8 +272,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 517400753
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5389405659716800493, guid: 1dabd3b2beeaef74db568e2519ad6987, type: 3}

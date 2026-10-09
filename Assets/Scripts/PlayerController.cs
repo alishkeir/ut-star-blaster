@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float mouseMoveSpeed = 30f;
 
     [SerializeField] float leftBoundPadding = 1f;
     [SerializeField] float rightBoundPadding = 1f;
@@ -12,10 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float bottomBoundPadding = 1f;
 
     Shooter playerShooter;
-    InputAction moveAction;
-    InputAction fireAction;
-
-
 
     Vector3 moveVector;
     Vector2 minBounds;
@@ -27,8 +24,8 @@ public class PlayerController : MonoBehaviour
 
         playerShooter = GetComponent<Shooter>();
 
-        fireAction = InputSystem.actions.FindAction("Fire");
-        moveAction = InputSystem.actions.FindAction("Move");
+        // fireAction = InputSystem.actions.FindAction("Fire");
+        // moveAction = InputSystem.actions.FindAction("Move");
 
         InitBounds();
 
@@ -36,9 +33,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        InitBounds();
-        MovePlayer();
-        FireShooter();
+        HandleMovement();
+        Debug.Log("Move Vector: " + (moveVector == Vector3.zero));
     }
 
     void InitBounds()
@@ -48,11 +44,27 @@ public class PlayerController : MonoBehaviour
         maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
     }
 
-    void MovePlayer()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        moveVector = moveAction.ReadValue<Vector2>();
+        moveVector = context.ReadValue<Vector2>();
+    }
 
-        Vector3 newPos = transform.position + moveVector * moveSpeed * Time.deltaTime;
+    public void OnFire(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            playerShooter.isFiring = true;
+        }
+        else
+        {
+            playerShooter.isFiring = false;
+        }
+    }
+
+
+    void HandleMovement()
+    {
+        Vector3 newPos = transform.position + moveSpeed * Time.deltaTime * moveVector;
 
         newPos.x = Math.Clamp(newPos.x, minBounds.x + leftBoundPadding, maxBounds.x - rightBoundPadding);
         newPos.y = Math.Clamp(newPos.y, minBounds.y + bottomBoundPadding, maxBounds.y - topBoundPadding);
@@ -60,10 +72,49 @@ public class PlayerController : MonoBehaviour
         transform.position = newPos;
     }
 
-    void FireShooter()
+
+    void OnDrawGizmos()
     {
-        playerShooter.isFiring = fireAction.IsPressed();
+        Camera mainCamera = Camera.main;
+
+        if (mainCamera == null)
+            return;
+
+        float distance = Mathf.Abs(transform.position.z - mainCamera.transform.position.z);
+
+        Vector3 bottomLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, distance));
+        Vector3 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, distance));
+        Vector3 topRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, distance));
+        Vector3 bottomRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, distance));
+
+        Gizmos.color = Color.yellow;
+
+        Gizmos.DrawLine(bottomLeft, topLeft);
+        Gizmos.DrawLine(topLeft, topRight);
+        Gizmos.DrawLine(topRight, bottomRight);
+        Gizmos.DrawLine(bottomRight, bottomLeft);
+
+        Gizmos.color = Color.red;
+
+        bottomLeft.x += leftBoundPadding;
+        bottomLeft.y += bottomBoundPadding;
+
+        topLeft.x += leftBoundPadding;
+        topLeft.y -= topBoundPadding;
+
+        topRight.x -= rightBoundPadding;
+        topRight.y -= topBoundPadding;
+
+        bottomRight.x -= rightBoundPadding;
+        bottomRight.y += bottomBoundPadding;
+
+        Gizmos.DrawLine(bottomLeft, topLeft);
+        Gizmos.DrawLine(topLeft, topRight);
+        Gizmos.DrawLine(topRight, bottomRight);
+        Gizmos.DrawLine(bottomRight, bottomLeft);
     }
+
+
 
 
 }
