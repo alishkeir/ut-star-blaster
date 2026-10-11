@@ -49,5 +49,8 @@ TagManager:
   - name: Sprites
     uniqueID: 517400753
     locked: 0
+  - name: Popups
+    uniqueID: 519732923
+    locked: 0
   m_RenderingLayers:
   - Default

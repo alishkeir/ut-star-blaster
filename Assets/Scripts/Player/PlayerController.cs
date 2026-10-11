@@ -20,17 +20,14 @@ public class PlayerController : MonoBehaviour
     Vector2 minBounds;
     Vector2 maxBounds;
 
+    bool controlsEnabled = true;
+
 
     void Start()
     {
-
         playerShooter = GetComponent<Shooter>();
 
-        // fireAction = InputSystem.actions.FindAction("Fire");
-        // moveAction = InputSystem.actions.FindAction("Move");
-
         InitBounds();
-
     }
 
     void Update()
@@ -47,16 +44,23 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (!controlsEnabled)
+            return;
         moveVector = context.ReadValue<Vector2>();
     }
 
     public void OnMouseMove(InputAction.CallbackContext context)
     {
+        if (!controlsEnabled)
+            return;
         mouseDelta = context.ReadValue<Vector2>();
     }
 
     public void OnFire(InputAction.CallbackContext context)
     {
+        if (!controlsEnabled)
+            return;
+
         if (context.performed)
         {
             playerShooter.isFiring = true;
@@ -66,13 +70,6 @@ public class PlayerController : MonoBehaviour
             playerShooter.isFiring = false;
         }
     }
-
-    public void OnQuitGame(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            Application.Quit();
-    }
-
 
     void HandleMovement()
     {
@@ -87,6 +84,15 @@ public class PlayerController : MonoBehaviour
         transform.position = newPos;
 
         mouseDelta = Vector2.zero;
+    }
+
+    public void EnableControls()
+    {
+        controlsEnabled = true;
+    }
+    public void DisableControls()
+    {
+        controlsEnabled = false;
     }
 
 
